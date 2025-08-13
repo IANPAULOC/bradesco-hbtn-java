@@ -40,10 +40,10 @@ public class PersonagemGame{
     }
 
     public void receberCura (int quantidadeDeCura){
-        if (getSaudeAtual() - quantidadeDeCura >= 100){
+        if (getSaudeAtual() + quantidadeDeCura >= 100){
             setSaudeAtual(100);
         }else {
-            setSaudeAtual(saudeAtual - quantidadeDeCura);
+            setSaudeAtual(saudeAtual + quantidadeDeCura);
         }
     }
 

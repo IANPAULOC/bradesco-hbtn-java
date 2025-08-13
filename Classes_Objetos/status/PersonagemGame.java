@@ -22,9 +22,9 @@ public class PersonagemGame{
 
     public void setSaudeAtual(int saudeAtual) {
         this.saudeAtual = saudeAtual;
-        if (saudeAtual > 0){
+        if (this.saudeAtual > 0){
             status = "vivo";
-        } else if (saudeAtual == 0){
+        } else if (this.saudeAtual == 0){
             status = "morto";
         }
 

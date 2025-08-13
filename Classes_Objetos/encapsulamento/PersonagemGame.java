@@ -1,7 +1,7 @@
 public class PersonagemGame{
 
-    public String nome;
-    public int saudeAtual;
+    private String nome;
+    private int saudeAtual;
 
     public String getNome() {
         return nome;

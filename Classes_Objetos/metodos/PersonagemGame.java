@@ -20,13 +20,17 @@ public class PersonagemGame{
     }
 
     public void tomarDano (int quantidadeDeDano){
-        if (saudeAtual >= 0){
+        if (saudeAtual - quantidadeDeDano <= 0){
+            saudeAtual = 0;
+        }else {
             saudeAtual -= quantidadeDeDano;
         }
     }
 
     public void receberCura (int quantidadeDeCura){
-        if (saudeAtual <= 100){
+        if (saudeAtual + quantidadeDeCura >= 100){
+            saudeAtual = 100;
+        }else{
             saudeAtual += quantidadeDeCura;
         }
     }

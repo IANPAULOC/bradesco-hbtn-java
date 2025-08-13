@@ -24,7 +24,8 @@ public class PersonagemGame{
         this.saudeAtual = saudeAtual;
         if (this.saudeAtual > 0){
             status = "vivo";
-        } else if (this.saudeAtual == 0){
+        }
+        if (this.saudeAtual == 0){
             status = "morto";
         }
 

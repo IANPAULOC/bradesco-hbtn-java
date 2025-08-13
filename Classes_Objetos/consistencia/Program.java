@@ -2,6 +2,7 @@ public class Program {
     public static void main(String[] args) {
         PersonagemGame personagem1 = new PersonagemGame(50, "Sonic");
 
+        personagem1.setNome("");
 
         System.out.printf("%s, %d, %s\n", personagem1.getNome(), personagem1.getSaudeAtual()
                 , personagem1.getStatus());

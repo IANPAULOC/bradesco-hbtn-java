@@ -1,0 +1,50 @@
+public class PersonagemGame{
+
+    private String nome;
+    private int saudeAtual;
+    private String status;
+
+    public String getStatus() {
+        return status;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public int getSaudeAtual() {
+        return saudeAtual;
+    }
+
+    public void setSaudeAtual(int saudeAtual) {
+        this.saudeAtual = saudeAtual;
+        if (saudeAtual <= 0){
+            status = "morto";
+        } else {
+            status = "vivo";
+        }
+
+    }
+
+    public void tomarDano (int quantidadeDeDano){
+        if (getSaudeAtual() - quantidadeDeDano <= 0){
+            setSaudeAtual(0);
+        }else {
+            setSaudeAtual(saudeAtual - quantidadeDeDano);
+        }
+    }
+
+    public void receberCura (int quantidadeDeCura){
+        if (getSaudeAtual() - quantidadeDeCura >= 100){
+            setSaudeAtual(100);
+        }else {
+            setSaudeAtual(saudeAtual - quantidadeDeCura);
+        }
+    }
+
+}
+

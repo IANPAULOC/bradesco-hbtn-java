@@ -1,5 +1,4 @@
 public class FormaGeometrica {
-
     private double area;
 
     public double area(){

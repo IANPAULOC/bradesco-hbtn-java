@@ -1,4 +1,4 @@
-public class PersonagemGame3{
+public class PersonagemGame{
 
     private String nome;
     private int saudeAtual;

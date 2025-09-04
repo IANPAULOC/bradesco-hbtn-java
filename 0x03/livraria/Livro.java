@@ -1,8 +1,3 @@
-import exceptions.AutorInvalidoException;
-import exceptions.LivroInvalidoException;
-import org.jetbrains.annotations.NotNull;
-
-
 public class Livro {
 
     private String titulo;

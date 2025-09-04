@@ -1,4 +1,3 @@
-import exceptions.LivroInvalidoException;
 
 public class LivroEdicaoOuro extends Livro {
 

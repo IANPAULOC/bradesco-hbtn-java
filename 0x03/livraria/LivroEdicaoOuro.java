@@ -1,3 +1,6 @@
+package livraria;
+
+import livraria.exceptions.LivroInvalidoException;
 
 public class LivroEdicaoOuro extends Livro {
 
@@ -7,6 +10,7 @@ public class LivroEdicaoOuro extends Livro {
 
     @Override
     public double getPreco() throws LivroInvalidoException {
-        return super.getPreco()*1.3;
+        double precoOriginal = super.getPreco();
+        return 1.30 * precoOriginal;
     }
 }

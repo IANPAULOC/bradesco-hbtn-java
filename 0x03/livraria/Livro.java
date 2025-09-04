@@ -1,6 +1,9 @@
+package livraria;
+
+import livraria.exceptions.AutorInvalidoException;
+import livraria.exceptions.LivroInvalidoException;
 
 public class Livro {
-
     private String titulo;
     private String autor;
     private double preco;
@@ -11,26 +14,38 @@ public class Livro {
         this.preco = preco;
     }
 
-    public String getTitulo() throws LivroInvalidoException{
-        if ((titulo.length() < 3)){
+    public String getTitulo() throws LivroInvalidoException {
+        if(titulo.length()<3){
             throw new LivroInvalidoException("Titulo de livro invalido");
         }
         return titulo;
     }
 
-    public String getAutor() throws AutorInvalidoException{
-        if (!autor.trim().contains(" ") ){
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public String getAutor() throws AutorInvalidoException {
+        String [] nomes = autor.split("\\s+");
+
+        if(nomes.length < 2) {
             throw new AutorInvalidoException("Nome de autor invalido");
         }
         return autor;
     }
 
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
 
-    public double getPreco() throws LivroInvalidoException{
-        if (preco <= 0 ){
+    public double getPreco() throws LivroInvalidoException {
+        if(preco <= 0) {
             throw new LivroInvalidoException("Preco de livro invalido");
         }
         return preco;
     }
 
+    public void setPreco(double preco) {
+        this.preco = preco;
+    }
 }

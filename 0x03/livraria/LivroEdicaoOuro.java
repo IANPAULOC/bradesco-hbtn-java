@@ -1,4 +1,3 @@
-import livraria.exceptions.LivroInvalidoException;
 
 public class LivroEdicaoOuro extends Livro {
 

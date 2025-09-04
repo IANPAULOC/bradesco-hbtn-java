@@ -1,6 +1,7 @@
-public class LivroInvalidoException extends Exception {
+package livraria.exceptions;
 
-    public LivroInvalidoException(String msg) {
-        super(msg);
+public class LivroInvalidoException extends Exception {
+    public LivroInvalidoException(String message) {
+        super(message);
     }
 }

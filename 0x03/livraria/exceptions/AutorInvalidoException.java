@@ -1,10 +1,8 @@
-package exceptions;
+package livraria.exceptions;
 
-public class AutorInvalidoException extends Exception {
-
-
-    public AutorInvalidoException(String msg) {
-        super(msg);
+public class AutorInvalidoException extends Exception{
+    public AutorInvalidoException(String mensagem) {
+        super(mensagem);
     }
 
 }

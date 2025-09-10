@@ -15,8 +15,8 @@ public class FileWritingExercise {
         String fileName = scanner.nextLine();
 
         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(fileName))) {
-            System.out.println("Digite linhas de texto (digite 'sair' para finalizar):");
             while (true) {
+                System.out.println("Digite linhas de texto (digite 'sair' para finalizar):");
                 String line = scanner.nextLine();
                 if (line.equalsIgnoreCase("sair")) {
                     break;

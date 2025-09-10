@@ -15,14 +15,16 @@ public class FileWritingExercise {
         String fileName = scanner.nextLine();
 
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(fileName , true))) {
-            boolean botaoSaida = false;
-            while (!botaoSaida){
-                System.out.println("Digite várias linhas de texto, caso deseje finalizar digite sair");
-                String line = scanner.nextLine();
-                if (line.equals(String.valueOf("sair"))){
-                    botaoSaida = true;
-                }else {
-                    bw.write(line + "\n");
+            System.out.println("Digite várias linhas de texto, caso deseje finalizar digite sair");
+            String line = scanner.nextLine();
+            if (!line.equals(String.valueOf("sair"))){
+                bw.write(line + "\n");
+                while (!line.equals(String.valueOf("sair"))){
+                    System.out.println("Digite várias linhas de texto, caso deseje finalizar digite sair");
+                    line = scanner.nextLine();
+                    if (!line.equals(String.valueOf("sair"))){
+                        bw.write(line + "\n");
+                    }
                 }
             }
         }catch (IOException e){

@@ -24,6 +24,8 @@ public class FileWritingExercise {
                     line = scanner.nextLine();
                     if (!line.equals(String.valueOf("sair"))){
                         bw.write(line + "\n");
+                    }else {
+                        break;
                     }
                 }
             }

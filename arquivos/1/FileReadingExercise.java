@@ -1,12 +1,10 @@
-import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.List;
-
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 
 public class FileReadingExercise {
     public static void main(String[] args) {
-        String fileName = "C:\\Users\\Ian\\Repositorios github\\bradesco-hbtn-java\\arquivos\\1\\exemplo.txt"; // Nome do arquivo fixo para leitura
+        String fileName = "exemplo.txt"; // Nome do arquivo fixo para leitura
 
 
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(fileName))){

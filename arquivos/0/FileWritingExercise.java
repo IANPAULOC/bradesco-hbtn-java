@@ -14,23 +14,18 @@ public class FileWritingExercise {
         System.out.print("Digite o nome do arquivo (com extensão .txt): ");
         String fileName = scanner.nextLine();
 
-        try (BufferedWriter bw = new BufferedWriter(new FileWriter(fileName , true))) {
-            System.out.println("Digite várias linhas de texto, caso deseje finalizar digite sair");
-            String line = scanner.nextLine();
-            if (!line.equals(String.valueOf("sair"))){
-                bw.write(line + "\n");
-                while (!line.equals(String.valueOf("sair"))){
-                    System.out.println("Digite várias linhas de texto, caso deseje finalizar digite sair");
-                    line = scanner.nextLine();
-                    if (!line.equals(String.valueOf("sair"))){
-                        bw.write(line + "\n");
-                    }else {
-                        break;
-                    }
+        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(fileName))) {
+            System.out.println("Digite linhas de texto (digite 'sair' para finalizar):");
+            while (true) {
+                String line = scanner.nextLine();
+                if (line.equalsIgnoreCase("sair")) {
+                    break;
                 }
+                bufferedWriter.write(line + "\n");
             }
-        }catch (IOException e){
-            e.getMessage();
+            System.out.println("Arquivo '" + fileName + "' criado e conteúdo salvo com sucesso.");
+        } catch (IOException e) {
+            System.out.println("Ocorreu um erro ao salvar o arquivo: " + e.getMessage());
         }
 
         scanner.close();

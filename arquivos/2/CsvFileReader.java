@@ -1,13 +1,11 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
 
 public class CsvFileReader {
     public static void main(String[] args) {
 
-        String fileName = "C:\\Users\\Ian\\Repositorios github\\bradesco-hbtn-java\\arquivos\\2\\funcionarios.csv"; // Nome do arquivo fixo para leitura
+        String fileName = "funcionarios.csv"; // Nome do arquivo fixo para leitura
 
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(fileName))){
             while(true){

@@ -56,6 +56,6 @@ public class Produto {
 
     @Override
     public String toString() {
-        return String.format("%s %.5f %.5f %d %s", nome, preco, peso, quantidadeEmEstoque, tipo);
+        return String.format("%s %.7f %.7f %d %s", nome, preco, peso, quantidadeEmEstoque, tipo);
     }
 }

@@ -1,3 +1,5 @@
+import java.text.DecimalFormat;
+
 public class Produto {
     private String nome;
     private double preco;
@@ -56,6 +58,11 @@ public class Produto {
 
     @Override
     public String toString() {
-        return String.format("%s %.7f %.7f %d %s", nome, preco, peso, quantidadeEmEstoque, tipo);
+        if (preco % 1 != 0){
+            DecimalFormat df = new DecimalFormat("0.000000");
+            return nome + " " + df.format(preco)  + " " + String.format("%.6f",peso) + " " + quantidadeEmEstoque + " " + tipo;
+        }else {
+            return String.format("%s %.6f %.6f %d %s", nome, preco, peso, quantidadeEmEstoque, tipo);
+        }
     }
 }

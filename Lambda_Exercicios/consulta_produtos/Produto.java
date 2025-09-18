@@ -56,6 +56,6 @@ public class Produto {
 
     @Override
     public String toString() {
-        return nome + " " + preco + " " + peso + " " + quantidadeEmEstoque + " " + tipo + ".";
+        return nome + " " + String.format("%.6f",preco)  + " " + peso + " " + quantidadeEmEstoque + " " + tipo + ".";
     }
 }

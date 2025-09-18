@@ -58,11 +58,6 @@ public class Produto {
 
     @Override
     public String toString() {
-        if (preco % 1 != 0){
-            DecimalFormat df = new DecimalFormat("0.000000");
-            return nome + " " + df.format(preco)  + " " + String.format("%.6f",peso) + " " + quantidadeEmEstoque + " " + tipo;
-        }else {
-            return String.format("%s %.6f %.6f %d %s", nome, preco, peso, quantidadeEmEstoque, tipo);
-        }
+        return String.format("%s %.6f %.6f %d %s", nome, preco, peso, quantidadeEmEstoque, tipo);
     }
 }
